@@ -1,0 +1,472 @@
+body {
+            margin:0px;
+            margin-left:20px;
+            margin-right:500px;
+    padding: 0;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: arial;
+    min-width:1040px;
+  }
+
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #008ECE;
+  color: white;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #59C7EB;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+#wrapper {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+            margin-left:20px;
+            margin-right:500px;
+}
+/* oben*/
+div#top {
+  margin: 0 auto;
+            margin-left:40px;
+            margin-right:500px;
+  padding: 0;
+  background-color: #ffffff;
+  color: #008ECE;
+}
+
+.toptext {
+  margin: 0 auto;
+            margin-left:25px;
+            margin-right:500px;
+  padding: 5px 0px 0px 10px;
+  font-size: 13pt;
+  font-family: arial;
+  font-weight: lighter;
+  width: 990px;
+  color: #008ECE;
+}
+
+div#header {
+  margin: 0 auto;
+            margin-left:20px;
+            margin-right:500px;
+  padding: 0;
+  background-color: #008ECE;
+}
+
+div#header-inner {
+  width: 990px;
+  margin: 0 auto;
+            margin-left:20px;
+            margin-right:500px;
+
+}
+
+div#headerleft {
+  margin: 0;
+
+  padding: 0;
+padding-top: 10px;
+  text-align: left;
+  background-color: #008ECE;
+  color: #009999;
+  width: 300px;
+  float: left;
+  height: 150px;
+}
+
+div#headerright {
+            margin-left:20px;
+  padding: 0px 5px;
+padding-top: 20px;
+  width: 600px;
+  background-color: #008ECE;
+  color: #FFFFFF;
+  text-align: center;
+  height: 180px;
+    word-wrap: break-word;
+    width: 950px;
+}
+.headertextbig {
+  font-size: 20pt;
+  font-family: arial;
+  letter-spacing: 2px;
+  padding-top: 60px;
+  text-shadow: 1px 1px 2px #FFFFFF;
+}
+
+.headertextsmall {
+  font-size: 14pt;
+  font-family: arial;
+  letter-spacing: 1px;
+  padding-top: 5px;
+}
+
+#subtitle {
+  font-size: 13pt;
+  padding: 5px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #000000;
+  color: #000000;
+}
+
+/* Hauptteil*/
+#main {
+  background-color: #ffffff;
+  padding: 0;
+            margin-left:20px;
+            margin-right:600px;}
+
+#main-inner {
+  width: 990px;
+  margin: 0 auto;
+  padding: 0px 0px;
+}
+/* Navigation links*/
+#navigationleft {
+  font-size: 14pt;
+  width: 220px;
+  float: left;
+  padding: 2px;
+}
+div#navigationleft h2 {
+  color: #009999;
+  background-color: #009999;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 10px 0px;
+  padding: 5px;
+  font-family: arial;
+  letter-spacing: 1px;
+  text-align: center;
+ -webkit-border-radius: 5px;
+ -khtml-border-radius: 5px;
+ -moz-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 20px;
+}
+.menue {
+  list-style-type:none;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  background-color: transparent;
+  line-height: 16px;
+}
+.menue li a, .menue li a:active, .menue li a:visited {
+  color: #000000;
+  background-color: transparent;
+  width: 180px;
+  padding: 2px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 13pt;
+  font-family: arial;
+  display: block;
+  font-weight: normal;
+  line-height: 25px;
+  border-bottom: 1px solid #000000;
+  text-shadow: 1px 1px 2px # #ffffff;
+}
+.menue li a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: arial;
+  color: #008ECE;
+  font-weight: normal;
+  background-color: transparent;
+  text-shadow: 1px 1px 2px #008ECE;
+}
+/* Inhalt*/
+div#content {
+  margin-left: 240px;
+  padding: 5px 0;
+  width: 700px;
+  font-size: 11pt;
+  font-weight: normal;
+  text-align: justify;
+  line-height: 20px;
+}
+div#content h1 {
+  color: #008ECE;
+  background-color: inherit;
+  font-family: arial;
+  font-size: 19pt;
+  text-align: left;
+  margin: 3px;
+  padding: 0px;
+}
+
+div#content h2 {
+  font-size: 17pt;
+  margin: 0;
+  color: #008ECE;
+  font-family: arial;
+  letter-spacing: 1px;
+  text-shadow: 0 -1px 1px #777777, 0 3px 2px #008ECE;
+  }
+
+div#content h3 {
+  color: #008ECE;
+  background-color: inherit;
+  font-family: arial;
+  font-size: 15pt;
+  font-style: italic;
+  padding-left: 5px;
+  font-weight: normal;
+}
+div#content h4 {
+  color: #008ECE;
+  background-color: #ffffff;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 0px;
+  padding: 2px;
+  font-family: arial;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #ffffff;
+  text-align: center;
+}
+div#content h5 {
+  color: #008ECE;
+  background-color: inherit;
+  font-family: arial;
+  font-size: 13pt;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 1px;
+
+}
+div#content h6 {
+  color: #008ECE;
+  background-color: inherit;
+  font-family: arial;
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0px;
+  padding: 3px;
+  letter-spacing: 1px;
+
+}
+div#content p {
+  margin: 8px 2px;
+    width: 600px;
+    word-wrap: break-word;
+}
+
+
+
+ /*unten*/
+
+div#footer {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: #009999;
+  background-color: #ffffff;
+  height: 179px;
+  clear: both;
+}
+div#footerbox  {
+  margin: 0 auto;
+  padding-left: 240px;
+  width: 750px;
+  font-size: 17pt;
+  font-family: arial;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+div#footerinnerbox1  {
+  margin: 2px;
+  padding: 3px;
+  font-family: arial;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 250px;
+  float:left;
+  background-color: transparent;
+  text-align: left;
+}
+div#footerinnerbox1 h2 {
+  margin: 0;
+  padding: 2px;
+  font-size: 15pt;
+  font-variant:small-caps;
+  color: #009999;
+  background-color: transparent;
+  width: 200px;
+  text-align: left;
+  border-bottom: 1px solid #009999;
+  line-height: 20px;
+  text-shadow: 1px 1px 2px #009999;
+}
+div#footerinnerbox2  {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  font-weight: bold;
+  width: 250px;
+  float: right;
+  text-align: left;
+  font-size: 11pt;
+  font-weight: normal;
+  text-align: justify;
+}
+div#footerinnerbox2 h2 {
+  margin: 0;
+  padding: 2px;
+  font-size: 15pt;
+  font-variant:small-caps;
+  color: #009999;
+  background-color: transparent;
+  width: 240px;
+  text-align: left;
+  border-bottom: 1px solid #009999;
+  line-height: 20px;
+  text-shadow: 1px 1px 2px #009999;
+}
+.footermenue {
+  list-style-type:none;
+  padding: 5px 0px 0px 0px;
+  margin: 0;
+  text-align: left;
+  background-color: transparent;
+}
+.footermenue li a, .footermenue li a:active, .footermenue li a:visited {
+  color: #009999;
+  background-color: transparent;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-size: 11pt;
+  font-family: arial;
+  display: block;
+  font-weight: bold;
+}
+.footermenue li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: arial;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+/* allgemeine Angaben*/
+a:link, a:visited, a:active {
+  color: #000000;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+a:hover {
+  color: #008ECE;
+  background-color: #transparent;
+  text-decoration: underline;
+}
+
+.footerlink {
+  clear: both;
+  background-color: #ffffff;
+  text-align: right;
+}
+
+footer {
+    float: right;
+    height: 35px;
+    margin: 0px 50px 0px 0px;
+    background: #transparent;
+    color: #000;
+    text-align: right;
+    padding: 10px 160px;
+    width: 360px;
+}
+
+ul.ba {
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+}
+
+
+/* Sreenmode*/
+
+
+
+
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    #header-inner, #main-inner {
+        width: auto;
+        padding: 0 10px;
+    }
+    div#navigationleft {
+        width: 100%;
+        float: none;
+    }
+    div#content {
+        margin-left: 0;
+        width: auto;
+    }
+    #headerleft img {
+        width: 100%;
+        height: auto;
+    }
+    .headertextsmall, .headertextbig {
+        font-size: smaller;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    #header-inner, #main-inner {
+        padding: 0 5px;
+    }
+    div#content {
+        margin-left: 0;
+        width: auto;
+    }
+    #navigationleft ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navigationleft ul li a {
+        padding: 5px;
+    }
+}
