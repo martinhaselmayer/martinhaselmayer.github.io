@@ -422,3 +422,51 @@ ul {
 
 
 
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    #header-inner, #main-inner {
+        width: auto;
+        padding: 0 10px;
+    }
+    div#navigationleft {
+        width: 100%;
+        float: none;
+    }
+    div#content {
+        margin-left: 0;
+        width: auto;
+    }
+    #headerleft img {
+        width: 100%;
+        height: auto;
+    }
+    .headertextsmall, .headertextbig {
+        font-size: smaller;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    #header-inner, #main-inner {
+        padding: 0 5px;
+    }
+    div#content {
+        margin-left: 0;
+        width: auto;
+    }
+    #navigationleft ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navigationleft ul li a {
+        padding: 5px;
+    }
+}
