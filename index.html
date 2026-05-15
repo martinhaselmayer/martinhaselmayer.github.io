@@ -1,96 +1,867 @@
-<html lang="de" xml:lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<head>
-<meta content="TEXT/HTML; CHARSET=UTF-8" http-equiv="content-type"/>
-<meta content="description" name="description"/>
-<meta content="description" name="keywords"/>
-<meta content="DE" name="language"/>
-<meta content="index,follow" name="robots"/>
-<link href="updated_style.css" rel="stylesheet" type="text/css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martin Haselmayer | Political Science</title>
+<meta name="description" content="Martin Haselmayer, political scientist working on democracy, inequality, political communication, representation, participation, quantitative and computational methods.">
+<meta name="robots" content="index,follow">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --bg:#f8f7f4;
+  --petrol:#173845;
+  --petrol-2:#244d5d;
+  --text:#1f1f1f;
+  --muted:#606970;
+  --line:#d8d8d2;
+  --card:#ffffff;
+  --soft:#f0f3f4;
+  --serif:'EB Garamond',serif;
+  --sans:'Inter',sans-serif;
+}
+
+* { box-sizing:border-box; scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  display:flex;
+  min-height:100vh;
+}
+
+aside {
+  width:318px;
+  background:var(--petrol);
+  color:white;
+  padding:46px 38px;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  border-right:2px solid #102831;
+  display:flex;
+  flex-direction:column;
+}
+
+.portrait {
+  width:240px;
+  height:190px;
+  background:none;
+  border:1px solid rgba(163,186,196,.45);
+  margin:0 auto 22px auto;
+  overflow:hidden;
+}
+
+.portrait img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 20%;
+  display:block;
+  transform:scale(1.05);
+}
+
+h1 {
+  font-family:var(--serif);
+  font-size:1.5rem;
+  font-weight:500;
+  line-height:1.1;
+  margin:0 0 22px 0;
+  text-align:center;
+  color:#d8e1e5;
+}
+.tagline {
+  margin-top:0;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.18);
+  font-size:.72rem;
+  letter-spacing:1.35px;
+  text-transform:uppercase;
+  color:#a3bac4;
+  line-height:1.7;
+}
+
+
+nav {
+  margin-top:38px;
+  flex-grow:1;
+}
+
+nav a {
+  display:block;
+  color:white;
+  text-decoration:none;
+  opacity:.78;
+  margin-bottom:12px;
+  font-size:.88rem;
+  transition:.18s;
+}
+
+nav a:hover {
+  opacity:1;
+  transform:translateX(4px);
+}
+
+.profiles {
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.profiles a {
+  display:inline-block;
+  color:white;
+  text-decoration:none;
+  font-size:.7rem;
+  border:1px solid rgba(255,255,255,.28);
+  padding:5px 8px;
+  margin-right:7px;
+  margin-bottom:8px;
+}
+
+.profiles a:hover {
+  background:white;
+  color:var(--petrol);
+}
+
+main {
+  margin-left:318px;
+  width:100%;
+  padding:58px 7%;
+  max-width:1160px;
+}
+
+section {
+  margin-bottom:66px;
+}
+
+h2 {
+  font-family:var(--serif);
+  font-size:1.75rem;
+  font-weight:500;
+  margin:0 0 24px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+
+h3 {
+  font-family:var(--serif);
+  font-size:1.28rem;
+  font-weight:500;
+  color:var(--petrol);
+  margin:0 0 8px;
+}
+
+h4,h5,h6 {
+  color:var(--petrol);
+  margin-top:1.25rem;
+  margin-bottom:.5rem;
+}
+
+p,li {
+  line-height:1.65;
+  color:#303030;
+  font-size:.97rem;
+}
+
+p {
+  max-width:850px;
+}
+
+a {
+  color:var(--petrol);
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.overview-box {
+  background:var(--soft);
+  border-left:4px solid var(--petrol);
+  padding:24px 28px;
+  max-width:920px;
+}
+
+.media {
+  background:#f3f3f0;
+  padding:22px 26px;
+  max-width:920px;
+  margin-top:28px;
+}
+
+.media-title {
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:1.1px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+.pillars {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:22px;
+  max-width:980px;
+}
+
+.research-grid {
+  grid-template-columns:1fr;
+}
+
+@media (min-width:1220px) {
+  .research-grid {
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.card {
+  background:var(--card);
+  border:1px solid #e0e0da;
+  padding:22px;
+}
+
+.card p:last-child {
+  margin-bottom:0;
+}
+
+.approach-box {
+  margin-top:28px;
+}
+
+#contact {
+  margin-top:48px;
+}
+
+.pub-list {
+  display:grid;
+  gap:10px;
+  max-width:930px;
+}
+
+.pub-item {
+  padding-bottom:12px;
+  border-bottom:1px solid #e6e6e1;
+}
+
+.pub-item p {
+  margin:0;
+}
+
+.pub-journal {
+  font-size:.73rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--muted);
+  margin-bottom:5px;
+}
+
+.pub-title {
+  font-family:var(--serif);
+  font-size:1.17rem;
+  color:var(--petrol);
+  margin-bottom:4px;
+}
+
+.pub-authors {
+  color:#4b4b4b;
+  font-size:.93rem;
+  line-height:1.55;
+}
+
+details {
+  max-width:980px;
+  margin-top:18px;
+  background:#fff;
+  border:1px solid #e0e0da;
+}
+
+summary {
+  cursor:pointer;
+  padding:16px 20px;
+  color:var(--petrol);
+  font-weight:600;
+  list-style:none;
+}
+
+summary::-webkit-details-marker {
+  display:none;
+}
+
+summary::after {
+  content:"+";
+  float:right;
+  font-weight:500;
+  color:var(--muted);
+}
+
+details[open] summary::after {
+  content:"–";
+}
+
+.details-content {
+  border-top:1px solid #e0e0da;
+  padding:20px 24px 26px;
+}
+
+.details-content p {
+  max-width:930px;
+  margin-top:.55rem;
+  margin-bottom:.9rem;
+}
+
+.details-content h5 {
+  font-family:var(--serif);
+  font-size:1.35rem;
+  font-weight:500;
+  border-bottom:1px solid #e6e6e1;
+  padding-bottom:8px;
+}
+
+.details-content h6 {
+  font-family:var(--serif);
+  font-size:1.15rem;
+  font-weight:500;
+}
+
+footer {
+  border-top:1px solid var(--line);
+  padding-top:24px;
+  color:var(--muted);
+  font-size:.8rem;
+  margin-top:48px;
+  max-width:980px;
+}
+
+@media (max-width:860px) {
+  body {
+    display:block;
+  }
+
+  aside {
+    position:relative;
+    width:100%;
+    height:auto;
+    border-right:none;
+    border-bottom:2px solid #102831;
+  }
+
+  main {
+    margin-left:0;
+    padding:42px 20px;
+  }
+}
+</style>
 </head>
+
 <body>
-<div id="wrapper">
-<div id="header">
-<div id="header-inner">
-<div id="headerleft"><img alt="" border="0" height="180" src="images/Politics.jpg" width="250"/></div>
-<div id="headerright">
-<div class="headertextbig"></div>
-<!--div class="headertextbig">My personal research page</div-->
-<div class="headertextsmall"> Political communication. Democracy and participation. Inequality. <p> Quantitative and computational methods.</p></div> </div>
-</div>
-</div>
-</div>
-<div id="main">
-<div id="main-inner">
-<div id="subtitle">Martin Haselmayer</div>
-<div id="navigationleft">
-<!--h2 title="Navigation">Navigation</h2-->
-<ul>
-<li><a class="active" href="index.html" title="Home"> Home</a></li>
-<li><a href="Research.html" title="„Research“"> Research</a></li>
-<li><a href="Publications.html" title="„Papers“"> Publications</a></li>
-<li><a href="Data.html" title="„Data“"> Data</a></li>
-<li><a href="Sortition.html" title="„Sortition“"> Sortition </a></li>
-<li><a href="Teaching.html" title="„Teaching“"> Teaching </a></li>
-<li><a href="Privacy.html" title="„Privacy“"> Data Privacy </a></li>
-</ul>
+
+<aside>
+  <div class="portrait">
+    <img src="Haselmayer_Foto.jpg" alt="Martin Haselmayer">
+  </div>
+
+  <h1>Martin Haselmayer</h1>
+
+  <div class="tagline">
+    Inequality & Representation<br>
+    Political Communication<br>
+    Democracy & Participation
+  </div>
+
+  <nav>
+    <a href="#about">Overview</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#sortition">Sortition</a>
+    <a href="#data">Data</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+<div class="profiles">
+  <a href="https://orcid.org/0000-0002-7765-5158" target="_blank">
+    <i class="fa-brands fa-orcid"></i>
+  </a>
+
+  <a href="https://scholar.google.at/citations?user=sSgEuNAAAAAJ&amp;hl=de&amp;oi=ao" target="_blank">
+    <i class="fa-solid fa-graduation-cap"></i>
+  </a>
+
+  <a href="https://www.researchgate.net/profile/Martin_Haselmayer//" target="_blank">
+    <i class="fa-brands fa-researchgate"></i>
+  </a>
+
+  <a href="mailto:martin.haselmayer@hcw.ac.at">
+    <i class="fa-regular fa-envelope"></i>
+  </a>
 </div>
 
-<div id="content">
-  <!-- <h5>Welcome</h5>-->
-  <h5>Welcome to my website!</h5>
+</aside>
+
+<main>
+
+<section id="about">
+
+  <div class="overview-box">
+
+    <p>
+I am a political scientist at the <a href="https://www.hcw.ac.at/en/fh-campus-wien/personen/details/martin-haselmayer" target="_blank">Research Center for Administrative Sciences</a>,
+      Hochschule Campus Wien, and senior research fellow at the
+      <a href="https://staatswissenschaft.univie.ac.at/en/about-us/research-fellow/" target="_blank">Department of Government</a>,
+      University of Vienna.
+    </p>
+
+    <p>
+Previously, I worked with the Austrian National Election Study (AUTNES) at the University of Vienna, the Cluster of Excellence: The Politics of Inequality at the University of Konstanz, and the FORESIGHT Institute.    </p>
+
+    <p>
+      My research has appeared in journals such as the
+      <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/why-inequalities-persist-parties-nonresponses-to-economic-inequality-19702020/6FAA21CB7442D085047A25B33DD7778D" target="_blank"><em>American Political Science Review</em></a>,
+      <a href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/who-gets-into-the-papers-party-campaign-messages-and-the-media/86CFE877C775EBB3777D39D8749D9C28" target="_blank"><em>British Journal of Political Science</em></a>,
+      <a href="https://ejpr.onlinelibrary.wiley.com/doi/abs/10.1111/1475-6765.12500" target="_blank"><em>European Journal of Political Research</em></a>,
+      <a href="https://www.cambridge.org/core/journals/perspectives-on-politics/article/when-do-parties-affect-economic-inequality-a-systematic-analysis-of-30-years-of-research/EBD0AB42AC4A83EAE6C432478062E360" target="_blank"><em>Perspectives on Politics</em></a>, and
+      <a href="https://www.tandfonline.com/doi/full/10.1080/10584609.2016.1265619" target="_blank"><em>Political Communication</em></a>.
+    </p>
+
+  </div>
+
+  <div class="media">
+
+    <div class="media-title">Selected Media Coverage</div>
+
+    <p>
+      Research and projects featured in
+      <a href="https://www.nytimes.com/2024/01/11/world/europe/austria-heiress-engelhorn-inheritance-giveaway.html" target="_blank">The New York Times</a>,
+      <a href="https://www.bbc.com/news/world-europe-67935463" target="_blank">BBC</a>,
+      <a href="https://fortune.com/europe/2024/03/15/austrian-heiress-basf-gives-away-27-million-basf-no-taxes/" target="_blank">Fortune</a>,
+      <a href="https://www.faz.net/einspruch/studie-richterinnen-gewaehren-haeufiger-asyl-16265524.html" target="_blank">Frankfurter Allgemeine Zeitung</a>,
+      <a href="https://oe1.orf.at/programm/20240515/757383/Skandale-Luegen-Schmutzkuebelkampagnen" target="_blank">Radio Ö1</a>,
+      and
+      <a href="https://www.derstandard.at/story/2000106784265/frueher-ging-es-im-wahlkampf-schmutziger-zu" target="_blank">Der Standard</a>.
+    </p>
+  </div>
+
+</section>
+
+<section id="research">
+
+  <h2>Research</h2>
+
   <p>
-    I am a postdoctoral researcher at the 
-    <a href="https://www.hcw.ac.at/en/fh-campus-wien/personen/details/martin-haselmayer" target="_blank">
-      University of Applied Sciences (Hochschule Campus Wien)</a>.
-    In addition, I am a senior research fellow at the 
-    <a href="https://staatswissenschaft.univie.ac.at/en/about-us/research-fellow/" target="_blank">
-      Department of Government,
-    </a> University of Vienna.
-    Previously, I was a pre- and postdoctoral researcher with the 
-    <a href="https://autnes.at/" target="_blank">Austrian National Election Study (AUTNES)</a>, as well as a postdoctoral researcher at the 
-    <a href="https://www.exc.uni-konstanz.de/en/ungleichheit/ueber-uns/personen/alle-clustermitglieder/haselmayer-martin/" target="_blank">
-      Cluster of Excellence: The Politics of Inequality</a> at the University of Konstanz and the 
-    <a href="https://www.foresight.at/" target="_blank">FORESIGHT Institute</a>.
+    My research examines the relationship between democracy, inequality, and political communication. I study how parties compete for votes, respond to social and economic challenges, and communicate with citizens — and how these processes shape political participation, representation, civic engagement, and democratic politics.
   </p>
 
+<div class="pillars research-grid">
+
+  <div class="card">
+    <h3>Political communication</h3>
+
+    <p>
+      My work investigates how parties compete for votes and attention and how citizens respond to political communication. This includes research on negative campaigning, issue and group appeals, and the role of media and social media in shaping responsiveness and perceptions of politics.
+    </p>
+
+    <p>
+    I am also interested in the consequences of communication strategies for polarization, accountability, democratic responsiveness, and citizens’ perceptions of politics and democracy.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Inequality and representation</h3>
+
+    <p>
+      I study how political actors address economic, social, and legal inequalities and how these inequalities shape political representation. Recent projects track party positions on equality across advanced democracies, showing how programmatic commitments have changed over time.
+    </p>
+
+    <p>
+I also examine how institutions and elites influence distributive politics, responsiveness, and the representation of social groups, as well as how inequalities are reinforced or challenged through law, policy, and political action.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Democracy and participation</h3>
+
+    <p>
+      My research also explores democratic innovations and participatory processes. This includes work on deliberative mini-publics such as the Good Council for Redistribution, where I analyze both who participates and how participation affects attitudes, knowledge, and civic engagement.
+    </p>
+
+    <p>
+      In addition to studying these processes, I have also been involved in the practical side of sortition, helping to ensure the fair and transparent selection of participants in citizen assemblies and other deliberative forums.
+    </p>
+  </div>
+
+</div>
+
+  <div class="overview-box approach-box">
+
+    <h3>Research approach</h3>
+
 <p>
-  My research has appeared in journals such as the 
-  <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/why-inequalities-persist-parties-nonresponses-to-economic-inequality-19702020/6FAA21CB7442D085047A25B33DD7778D" target="_blank"><em>American Political Science Review</em></a>, 
-  <a href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/who-gets-into-the-papers-party-campaign-messages-and-the-media/86CFE877C775EBB3777D39D8749D9C28" target="_blank"><em>British Journal of Political Science</em></a>, 
-  <a href="https://ejpr.onlinelibrary.wiley.com/doi/abs/10.1111/1475-6765.12500" target="_blank"><em>European Journal of Political Research</em></a>, 
-  <a href="https://www.cambridge.org/core/journals/perspectives-on-politics/article/when-do-parties-affect-economic-inequality-a-systematic-analysis-of-30-years-of-research/EBD0AB42AC4A83EAE6C432478062E360" target="_blank"><em>Perspectives on Politics</em></a>, and 
-  <a href="https://www.tandfonline.com/doi/full/10.1080/10584609.2016.1265619" target="_blank"><em>Political Communication</em></a>.
-</p>
-  
-<p>
-  My research, expertise, and projects have been featured in national and international media, including 
-  <a href="https://www.nytimes.com/2024/01/11/world/europe/austria-heiress-engelhorn-inheritance-giveaway.html" target="_blank"><em>The New York Times</em></a>, 
-  <a href="https://www.bbc.com/news/world-europe-67935463" target="_blank"><em>BBC</em></a>, 
-  <a href="https://fortune.com/europe/2024/03/15/austrian-heiress-basf-gives-away-27-million-basf-no-taxes/" target="_blank"><em>Fortune</em></a>, 
-  <a href="https://oglobo.globo.com/economia/noticia/2024/03/15/estranhos-escolhidos-aleatoriamente-para-gastar-fortuna-de-herdeira-bilionaria-se-reunem-pela-1a-vez-na-austria-entenda.ghtml" target="_blank"><em>O Globo</em></a>, 
-  <a href="https://www.rfi.fr/fr/%C3%A9conomie/20240128-autriche-l-h%C3%A9riti%C3%A8re-basf-veut-payer-des-imp%C3%B4ts-et-partager-sa-fortune" target="_blank"><em>Radio France Internationale</em></a>, 
-  <a href="https://www.faz.net/einspruch/studie-richterinnen-gewaehren-haeufiger-asyl-16265524.html" target="_blank"><em>Frankfurter Allgemeine Zeitung</em></a>, 
-  <a href="https://oe1.orf.at/programm/20240515/757383/Skandale-Luegen-Schmutzkuebelkampagnen" target="_blank"><em>Radio Ö1</em></a>, and 
-  <a href="https://www.derstandard.at/story/2000106784265/frueher-ging-es-im-wahlkampf-schmutziger-zu" target="_blank"><em>Der Standard</em></a>.
+Across these projects, I combine quantitative, computational, and experimental methods with original data collection and applied research. My work includes text analysis, survey research, observational and experimental designs, and the development of computational tools and datasets for political communication research. I approach both academic and policy-oriented work with the same methodological rigor, aiming to advance theory while contributing to practical debates on democracy and representation.
 </p>
 
-  <br/>
-  <div id="subtitle">Contact</div> 
+  </div>
 
-  Martin Haselmayer
-  <br/>Hochschule Campus Wien, Research Center Administrative Sciences<br/>
-  University of Vienna, Department of Government<br/>
-  <a href="mailto:martin.haselmayer@hcw.ac.at">martin.haselmayer@hcw.ac.at</a>  <br/>
-  <a href="mailto:martin.haselmayer@univie.ac.at">martin.haselmayer@univie.ac.at</a> <br/>
-  <a href="https://orcid.org/0000-0002-7765-5158" target="_blank">ORCID</a><br/>
-  <a href="https://scholar.google.at/citations?user=sSgEuNAAAAAJ&amp;hl=de&amp;oi=ao" target="_blank">Google Scholar</a><br/>
-  <a href="http://www.researchgate.net/profile/Martin_Haselmayer//" target="_blank">ResearchGate</a><br/>
+</section>
+
+<section id="publications">
+
+  <h2>Publications</h2>
+
+  <h3>Selected publications</h3>
+
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <p>
+        Horn, Alexander, <strong>Martin Haselmayer</strong>, and K. Jonathan Klüser (2026).
+        Why inequalities persist. Parties' (non-)responses to economic inequality, 1970–2020.
+        <em>American Political Science Review</em> 120(1): 346–364.
+        <a href="https://doi.org/10.1017/S0003055425100907" target="_blank">https://doi.org/10.1017/S0003055425100907</a>
+      </p>
+    </div>
+
+    <div class="pub-item">
+      <p>
+        <strong>Haselmayer, Martin</strong> and Alexander Horn (2025).
+        (When) do parties affect economic inequality? A systematic analysis of 30 years of research.
+        <em>Perspectives on Politics</em> 23(3): 944–963.
+        <a href="https://doi.org/10.1017/S1537592724001786" target="_blank">https://doi.org/10.1017/S1537592724001786</a>
+      </p>
+    </div>
+
+    <div class="pub-item">
+      <p>
+        Huber, Lena M. and <strong>Martin Haselmayer</strong> (2025).
+        Promising links: how parties combine policy issues with group appeals.
+        <em>West European Politics</em> 48(7): 1732–1759.
+        <a href="https://doi.org/10.1080/01402382.2024.2351345" target="_blank">https://doi.org/10.1080/01402382.2024.2351345</a>
+        <a href="https://martinhaselmayer.github.io/papers/Huber_and_Haselmayer_Promising_Links_Preprint.pdf" target="_blank">(Pre-print)</a>
+      </p>
+    </div>
+
+    <div class="pub-item">
+      <p>
+        Meyer, Thomas M., <strong>Martin Haselmayer</strong>, and Markus Wagner (2020).
+        Who gets into the papers? Party campaign messages and the media.
+        <em>British Journal of Political Science</em> 50(1): 281–302.
+        <a href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/who-gets-into-the-papers-party-campaign-messages-and-the-media/86CFE877C775EBB3777D39D8749D9C28" target="_blank">DOI: 10.1017/S0007123417000400 </a>
+        <a href="https://martinhaselmayer.github.io/papers/Meyer et al Who gets into the papers_Preprint.pdf" target="_blank">(Pre-print)</a>
+      </p>
+    </div>
+    <div class="pub-item">
+       <p>
+<b>Haselmayer, Martin</b> and Marcelo Jenny (2017). Sentiment analysis of political communication: Combining a dictionary approach with crowdcoding. <em>Quality &amp; Quantity </em> 51(6): 2623-2646. <a href="http://link.springer.com/article/10.1007%2Fs11135-016-0412-4" target="_blank"> DOI: 10.1007/s11135-016-0412-4</a>
+      </p>
+    </div>
+
+  </div>
+
+
+  <details>
+    <summary>Full publication list</summary>
+    <div class="details-content">
+      <h5>Journal articles</h5>
+<p> [25.] Horn, Alexander, <b>Martin Haselmayer</b>, and  K. Jonathan Klüser (2026). Blurring lines. Economic equality and equal rights concepts of center- and far-right parties, 1970–2020. <i> Party Politics</i> 32(2): 219-230. <a href="https://doi.org/10.1177/13540688251339625" target="_blank"> https://doi.org/10.1177/13540688251339625</a> </p>
+<p> [24.] Horn, Alexander, <b>Martin Haselmayer</b>, and  K. Jonathan Klüser (2026). Why inequalities persist. Parties' (non-)responses to economic inequality, 1970-2020. <i> American Political Science Review</i> 120(1): 346-364. <a href="https://doi.org/10.1017/S0003055425100907" target="_blank"> https://doi.org/10.1017/S0003055425100907</a> </p>
+<p> [23.] Horn, Alexander, K. Jonathan Klüser, Simon Rittershaus, and <b>Martin Haselmayer</b> (2026). Unequal German Democracy and the Rise of the “Lifestyle-Left”? How Left Parties in Germany Conceive of (In)Equality, 1970-2021.  <i> German Politics</i> 25(1): 29-52. <a href="https://doi.org/10.1080/09644008.2025.2453242" target="_blank"> https://doi.org/10.1080/09644008.2025.2453242</a> </p>
+<p> [22.] <b>Haselmayer, Martin</b> and Alexander Horn (2025). (When) do parties affect economic inequality? A systematic analysis of 30 years of research. <i> Perspectives on Politics</i> 23(3): 944-963. <a href="https://doi.org/10.1017/S1537592724001786" target="_blank"> https://doi.org/10.1017/S1537592724001786</a> </p>
+<p> [21.] Huber, Lena M. and <b>Martin Haselmayer</b> (2025). Promising links: how parties combine policy issues with group appeals. <i> West European Politics</i> 48(7): 1732-1759.  <a href="https://doi.org/10.1080/01402382.2024.2351345" target="_blank"> https://doi.org/10.1080/01402382.2024.2351345</a> <a href="https://martinhaselmayer.github.io/papers/Huber_and_Haselmayer_Promising_Links_Preprint.pdf" target="_blank"> (Pre-print)</a></p>
+<p> [20.] Horn, Alexander, K. Jonathan Klüser, and <b>Martin Haselmayer</b> (2025). Social Progress at the Expense of Economic Equality? New Data on Left Parties' Equality Preferences. <i> European Journal of Political Research</i> 64(4): 2051-2062. <a href="https://ejpr.onlinelibrary.wiley.com/doi/full/10.1111/1475-6765.70008" target="_blank"> https://doi.org/10.1111/1475-6765.70008</a> </p>
+<p> [19.] <b>Haselmayer, Martin</b> (2025). Participation in the Good Council. Insights from a private mini-public. <i> Journal of Sortition</i> 1(1): 67-92. <a href="https://doi.org/10.53765/3050-0672.1.1.067" target="_blank"> https://doi.org/10.53765/3050-0672.1.1.067</a> <a href="https://martinhaselmayer.github.io/papers/Haselmayer_2025_Participation_in_the_Good_Council.pdf" target="_blank"> (Article)</a></p>	
+<p> [18.] <b>Haselmayer, Martin</b>, Sarah C. Dingler, and Marcelo Jenny (2022). How women shape negativity in parliamentary speeches - A sentiment analysis of debates in the Austrian parliament. <i> Parliamentary Affairs</i> 75(4): 867-886. <a href="https://doi.org/10.1093/pa/gsab045" target="_blank"> DOI: 10.1093/pa/gsab045</a>
+<a href="https://martinhaselmayer.github.io/papers/Haselmayer_et_al_How_women_shape negativity_Preprint.pdf" target="_blank"> (Pre-print)</a></p>
+<p>[17.] Ennser-Jedenastik, Laurenz, <b>Martin Haselmayer</b>, Lena M. Huber, and Martin Fenz. Who talks about what? Issue strategies across the party hierarchy (2022). <i> European Journal of Political Research</i> 61(3): 842-852.
+<a href="https://doi.org/10.1111/1475-6765.12500" target="_blank"> DOI: 10.1111/1475-6765.12500</a> <a href="https://martinhaselmayer.github.io/papers/EnnserJedenastik_et_al_Who_talks_about_what_Preprint.pdf" target="_blank"> (Pre-print)</a></p>
+<p>
+[16.] Ennser-Jedenastik, Laurenz, Christina Gahn, Anita Bodlos, and <b>Martin Haselmayer </b> (2022). Does social media enhance party responsiveness? How user engagement shapes parties’ issue attention on Facebook. <i> Party Politics</i> 28(3): 468-481. 
+		<a href="https://journals.sagepub.com/doi/full/10.1177/1354068820985334" target="_blank"> DOI: 10.1177/1354068820985334 </a> </p>
+<p>
+[15.] Ennser-Jedenastik, Laurenz, <b>Martin Haselmayer</b>, Lena M. Huber, and Manuel E. Scharrer (2022). Issue substitution or volume expansion: How parties accommodate agenda change. <i> Electoral Studies</i> 76.
+	<a href="https://doi.org/10.1016/j.electstud.2021.102437" target="_blank"> https://doi.org/10.1016/j.electstud.2021.102437</a> </p>
+<p>	
+[14.] <b>Haselmayer, Martin</b> (2021). Candidates rather than context shape campaign sentiment in French Presidential Elections (1965-2017). <i> French Politics</i> 19(4): 394-420. 
+		<a href="https://doi.org/10.1057/s41253-021-00159-5" target="_blank"> DOI: 10.1057/s41253-021-00159-5 </a> </p>
+<p>
+[13.] <b>Haselmayer, Martin</b>, Lisa Hirsch, and Marcelo Jenny (2020). Love is blind. Partisanship and perception of negative campaign messages in a multiparty system. <i> Political Research Exchange</i> 2(1): 1-17.<a href="https://www.tandfonline.com/doi/full/10.1080/2474736X.2020.1806002" target="_blank"> DOI: 10.1080/2474736X.2020.1806002</a>
+</p>
+<p>
+[12.] Ecker, Alejandro, Laurenz Ennser-Jedenastik, and <b>Martin Haselmayer </b> (2020). Gender bias in asylum adjudications: Evidence for leniency toward token women.<i> Sex Roles </i> 82(1): 117-126.<a href="https://link.springer.com/article/10.1007/s11199-019-01030-2" target="_blank"> DOI: 10.1007/s11199-019-01030-2</a>
+<a href="https://martinhaselmayer.github.io/papers/Ecker_et_al_2020_Gender_bias_in_asylum_adjudications.pdf" target="_blank"> (Pre-print)</a> </p>
+<p>[11.] Meyer, Thomas M., <b>Martin Haselmayer</b>, and Markus Wagner (2020). Who gets into the papers? Party campaign messages and the media. <i>British Journal of Political Science</i> 50(1): 281-302. <a href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/who-gets-into-the-papers-party-campaign-messages-and-the-media/86CFE877C775EBB3777D39D8749D9C28" target="_blank"> DOI: 10.1177/1354068817724174 </a> <a href="https://martinhaselmayer.github.io/papers/Meyer et al Who gets into the papers_Preprint.pdf" target="_blank"> (Pre-print)</a> </p>
+<p>[10.] <b>Haselmayer, Martin</b> (2019). Negative campaigning. A review and a look ahead. <i>French Politics</i> 17(3): 355-372. <a href="https://link.springer.com/article/10.1057/s41253-019-00084-8" target="_blank"> DOI: 10.1057/s41253-019-00084-8</a>
+</p>
+<p>[9.] <b>Haselmayer, Martin</b>, Thomas M. Meyer, and Markus Wagner  (2019). Fighting for attention: Media coverage of negative campaign messages. <i>Party Politics</i> 25(3): 412-423.<a href="http://journals.sagepub.com/doi/10.1177/1354068817724174" target="_blank"> DOI: 10.1177/1354068817724174 </a>
+<a href="https://martinhaselmayer.github.io/papers/Haselmayer_et_al_Fighting_for_attention_Preprint.pdf" target="_blank"> (Pre-print) </a> </p>
+<p>[8.] <b>Haselmayer, Martin</b> and Marcelo Jenny (2018). <i>Friendly fire?</i> Negative campaigning among coalition partners. <i>Research and Politics</i> 5(3): 1-9. <a href="http://journals.sagepub.com/doi/full/10.1177/2053168018796911" target="_blank"> 
+DOI: 10.1177/2053168018796911 </a> </p>
+<p>[7.] Rudkowsky, Elena, <b>Martin Haselmayer</b>, Matthias Wastian, Marcelo Jenny, Stefan Emrich, and Michael Sedlmair (2018). More than bags of words: Sentiment Analysis with word embeddings.  <i>Communication Methods and Measures</i> 12(2-3): 140-157.<a href="https://www.tandfonline.com/doi/full/10.1080/19312458.2018.1455817
+" target="_blank"> DOI: 10.1080/19312458.2018.1455817 </a></p>
+<p>[6.] <b>Haselmayer, Martin</b> and Marcelo Jenny (2017). Sentiment analysis of political communication: Combining a dictionary approach with crowdcoding. <i>Quality &amp; Quantity</i> 51(6): 2623-2646.
+<a href="http://link.springer.com/article/10.1007%2Fs11135-016-0412-4" target="_blank"> DOI: 10.1007/s11135-016-0412-4</a></p>
+<p>[5.] <b>Haselmayer, Martin</b>, Markus Wagner, and Thomas M. Meyer (2017). Partisan bias in message selection: media gatekeeping of party press releases. <i>Political Communication</i> 34(3): 367-384. 
+<a href="http://www.tandfonline.com/doi/abs/10.1080/10584609.2016.1265619" target="_blank"> DOI: 
+10.1080/10584609.2016.1265619 </a></p>
+<br/>
+
+	
+<h5>Book chapters</h5>
+<p>[4.] Jenny, Marcelo, <b>Martin Haselmayer</b>, and Daniel Kapla (2021). Measuring incivility in parliamentary debates: Validating a sentiment analysis procedure with Calls to Order in the Austrian Parliament. In: Annemarie Walter (Ed.), <i>Crossing boundaries: Political Incivility in the Parliamentary, Electoral and Media Arena</i>. Abingdon: Routledge, pp.56-66.  <a href="https://martinhaselmayer.github.io/papers/Jenny_Haselmayer_Kapla_2021_Measuring_incivility_in_parliamentary_debates_Preprint.pdf" target="_blank"> (Download pre-print version)</a> <a href="https://books.google.at/books?id=OSQSEAAAQBAJ&amp;pg=PT60&amp;dq=Measuring+incivility+in+parliamentary+debates:+Validating+a+sentiment+analysis+procedure+with+Calls+to+Order+in+the+Austrian+Parliament++I+Crossing+boundaries:+Political+Incivility+in+the+Parliamentary,+Electoral+and+Media+Arena.&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwis2vu47pPwAhUvhf0HHcx3DBYQ6AEwAHoECAQQAg#v=onepage&amp;q=Measuring%20incivility%20in%20parliamentary%20debates%3A%20Validating%20a%20sentiment%20analysis%20procedure%20with%20Calls%20to%20Order%20in%20the%20Austrian%20Parliament%20%20I%20Crossing%20boundaries%3A%20Political%20Incivility%20in%20the%20Parliamentary%2C%20Electoral%20and%20Media%20Arena.&amp;f=false" target="_blank"> (Preview on Google Books)</a> </p>
+<p>[3.] Bodlos, Anita, Laurenz Ennser-Jedenastik, <b>Martin Haselmayer</b>, Thomas M. Meyer, and Wolfgang C. Müller (2018). The Austrian election of 2017: An election won in the long campaign. In: Brigid Laffand and Lorenzo Cicchi (Eds.), <i>2017: Europe's bumper year of elections</i>. San Domenico di Fiesole: European University Institute (EUI), pp. 151-172 <a href="http://cadmus.eui.eu/bitstream/handle/1814/60213/Europe_s_2018.pdf?sequence=2&amp;isAllowed=y#page=172" target="_blank"> (Download chapter)</a> </p>
+<p>[2.] Dolezal, Martin, <b>Martin Haselmayer</b>, and Marcelo Jenny (2014). Kandidatinnen und Kandidaten im Wahlkampf. In: Sylvia Kritzinger, Wolfgang C. Müller &amp; Klaus Schönbach (Eds.), <i>Die Nationalratswahl 2013. Wie Parteien, Medien und Wählerschaft zusammenwirken</i>. Vienna: Böhlau, pp. 87-98.  <a href="https://martinhaselmayer.github.io/papers/Dolezal et al. 2013 Kapitel 4. Kandidatinnen und Kandidaten im Wahlkampf.pdf" target="_blank"> (Download chapter)</a> </p>
+<p>[1.] Dolezal, Martin, <b>Martin Haselmayer</b>, David Johann, Kathrin Thomas, and Laurenz Ennser- Jedenastik (2014). Negative Campaigning. In: Sylvia Kritzinger, Wolfgang C. Müller &amp; Klaus Schönbach (Eds.), <i>Die Nationalratswahl 2013. Wie Parteien, Medien und Wählerschaft zusammenwirken</i>. Vienna: Böhlau, pp. 99-112. <a href="https://martinhaselmayer.github.io/papers/Dolezal et al. 2013 Kapitel 5. Negative Campaigning.pdf" target="_blank"> (Download chapter)</a> </p>
+<br/>
+<h5>Working papers</h5>
+<p>[4.] The Good Council: Deliberating inequality in a field experiment, with Franziska Disslbacher, Lukas Lehner, Severin Rapp and Franziska Windisch. <a href="https://www.socialscienceregistry.org/trials/13874" target="_blank"> Pre-registered analysis plan </a> </p>
+<p>[3.] Strategic Alienation: The Dynamics of Group Appeals in Negative Campaigning, with Lena M. Huber.</p>
+<p>[2.] Same same but different? Asymmetric perceptions of party issue strategies, with Lisa Hirsch and Marcelo Jenny. </p>
+<p>[1.] Defending the home turf? Negative campaigning, issue ownership and issue salience, with Marcelo Jenny. </p>
+
+<!--
+<h5>Blogs</h5>
+<p>[4.] <b>Haselmayer, Martin</b>, Laurenz Ennser-Jedenastik, and Alejandro Ecker (2019). Wenn das Geschlecht über Asylentscheidungen entscheidet: Analyse von 41,000 Urteilen des Asylgerichtshofs (2008-2013), 
+<a href="https://viecer.univie.ac.at/blog/detail/news/wenn-das-geschlecht-ueber-asylentscheidungen-entscheidet-analyse-von-41000-urteilen-des-asylgericht-1/?tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Baction%5D=detail&amp;cHash=0e15361d11e15e9ef6cf387b90797df5" target="_blank"> Vienna Center for Electoral Research</a> - University of Vienna.</p>
+<p>[3.] Bodlos, Anita, <b>Martin Haselmayer</b>, and Teresa Haudum (2018). War 2017 ein „Ausländerwahlkampf“?, 
+<a href="https://viecer.univie.ac.at/blog/detail/news/war-2017-ein-auslaenderwahlkampf/?tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Baction%5D=detail&amp;cHash=b2b5e0696ab85733569d9f513702b4b5" target="_blank"> Vienna Center for Electoral Research</a> - University of Vienna.</p>
+<p>[2.] Jenny, Marcelo and <b>Martin Haselmayer</b> (2015). Negative campaigning in Austria: Abundant, colorful and ingenious, 
+<a href="http://nottspolitics.org/2015/11/04/negative-campaigning-in-austria-abundant-colorful-and-ingenious/" target="_blank"> Ballots and Bullets</a> - School of Politics &amp; International Relations, University of Nottingham.</p>
+<p>[1.] Meyer, Thomas M., <b>Martin Haselmayer</b>, and Markus Wagner (2015). The media's gatekeeping function means that party press coverage often reproduces and reinforces existing power structures, <a href="http://www.democraticaudit.com/?p=15261" target="_blank"> Democratic Audit</a> - London School of Economics.</p>
+<br/>
+
+-->
+    </div>
+  </details>
+
+</section>
+
+<section id="sortition">
+
+  <h2>Sortition</h2>
+
+  <div class="pillars">
+
+    <div class="card">
+      <h3>Guter Rat</h3>
+      <p>
+        Implementation of the random selection process for a nationwide citizen assembly on redistribution.
+      </p>
+      <p>
+        <a href="https://guterrat.info/" target="_blank">Project website →</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Wiener Klimateam</h3>
+      <p>
+        Random selection of representative citizen juries at the district level for participatory climate-policy initiatives in Vienna.
+      </p>
+      <p>
+        <a href="https://klimateam.wien.gv.at/" target="_blank">Project website →</a>
+      </p>
+    </div>
+</div>
+
+  <details>
+    <summary>Further information and related reports</summary>
+    <div class="details-content">
+      <!-- <h5>Welcome</h5>-->
+<h5>Sortition</h5>
+<p> Citizen assemblies aim to foster inclusive and deliberative decision-making processes by bringing together a diverse group of randomly selected citizens to discuss and provide input on matters of public policy. A key feature of any citizen assembly is a representative and fair selection of its members.
+Since May 2023, I have been implementing statistical solutions to select representative citizen juries and citizen assemblies using <a href="https://www.nature.com/articles/s41586-021-03788-6" target="_blank"> state-of-the-art algorithms</a>. The approach aims to choose representative panels while mathematically maximizing any individual's probability to be included in the final panel. </p>
+<br/>
+<h5>Current projects</h5>
+ <p> 2024: Implementation of the random selection process for a nationwide citizen assembly as part of <a href="https://guterrat.info/" target="_blank"> Guter Rat</a> (Good Council).  
+ <p> 2023–2025: Random selection of representative citizen juries at the district level for <a href="https://klimateam.wien.gv.at/" target="_blank"> Wiener Klimateam</a>. </p>
+<br/>
+
+ <h5>Related research reports</h5>
+<p> <b>Haselmayer, Martin</b> (2024). Guter Rat für Rückverteilung: Bevölkerungsbericht. FORESIGHT, November 2024. [<a href="https://www.foresight.at/fileadmin/user_upload/pdf/FORESIGHT_Bericht_23061_Guter_Rat_Bevoelkerung.pdf" target="_blank">Population survey report</a>] </p>
+<p> <b> Haselmayer, Martin</b> und Saskja Schindler (2024). Guter Rat für Rückverteilung: Mitgliederbericht. FORESIGHT, November 2024. [<a href="https://www.foresight.at/fileadmin/user_upload/pdf/FORESIGHT_Bericht_23061_Guter_Rat_Mitglieder.pdf" target="_blank">Member survey report</a>] </p>
+<p> <b>Haselmayer, Martin</b> (2024). Auswahl der Mitglieder des Guten Rats. FORESIGHT, March 2024. [<a href="https://www.foresight.at/fileadmin/user_upload/pdf/FORESIGHT_Bericht_23061_Guter_Rat_Auswahl.pdf" target="_blank">Selection report</a>] </p>
+
+<p>
+    </div>
+  </details>
+
+</section>
+
+<section id="data">
+
+  <h2>Data & Open Science</h2>
+
+  <div class="pillars">
+
+    <div class="card">
+      <h3>German Political Sentiment Dictionary</h3>
+      <p>
+        A German-language sentiment dictionary for political communication research.
+      </p>
+      <p>
+        <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/7PFLIU" target="_blank">AUSSDA repository →</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Training Data for Sentiment Analysis</h3>
+      <p>
+        Crowdcoded data from Austrian political communication (1995-2013).
+      </p>
+      <p>
+        <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/EOPCOB" target="_blank">AUSSDA repository →</a>
+      </p>
+    </div>
+
+<div class="card">
+  <h3>Equality and Representation Dataset</h3>
 
   <p>
-    <br/>
-    <footer>
-      <p>Illustration by <a href="http://zabou.me/" target="_blank">Zabou</a></p>
-    </footer>
+    Comparative data on party conceptions of equality across 12 OECD countries, 1970–2025.
+  </p>
+
+  <p>
+    <a href="https://doi.org/10.7910/DVN/DPNEKE" target="_blank">Harvard Dataverse →</a>
   </p>
 </div>
+  </div>
+
+
+  <details>
+    <summary>Dataset details and related publications</summary>
+    <div class="details-content">
+      <h5>Data</h5>
+<p>
+<p>
+<h6>The German Political Sentiment Dictionary</h6>
+<p>Haselmayer, Martin and Marcelo Jenny (2020). The German Political Sentiment Dictionary (SUF edition). AUSSDA, V1. <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/7PFLIU" target="_blank">doi:10.11587/7PFLIU</a> </p>
+<p>The dataset contains a German-language sentiment dictionary of 5,001 negative words and their associated sentiment strength on a five-point-scale from 0 (not negative) to 4 (very strongly negative).  </p>
+<p>Data and documentation can be downloaded for scientific use at <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/7PFLIU" target="_blank">AUSSDA (Austrian Social Science Data Archive)</a> </p>
+<br/>
+<b>Related publication:</b>
+<p>Haselmayer, Martin and Marcelo Jenny (2017). Sentiment Analysis Of Political Communication: Combining a dictionary approach with crowdcoding. <i>Quality &amp; Quantity</i> 51(6): 2623-2646. <a href="http://link.springer.com/article/10.1007%2Fs11135-016-0412-4" target="_blank">doi:10.1007/s11135-016-0412-4</a> <p>
+<br/>
+<h6>Training Data: German Sentiment Analysis of Political Communication</h6>
+<p>Haselmayer, Martin and Marcelo Jenny (2020). Training Data for German Sentiment Analysis of Political Communication (SUF edition). AUSSDA, V1. <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/EOPCOB" target="_blank">doi:10.11587/EOPCOB</a> </p>
+<p>The dataset contains 125,871 sentences extracted from Austrian parliamentary debates and party press releases (1995-2013). The sentiment of the sentences was crowdcoded on a five-point-scale ranging from 0 “Not negative” to 5 “Very strongly negative”. </p>
+<p>Data and documentation can be downloaded for scientific use at <a href="https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/EOPCOB" target="_blank">AUSSDA (Austrian Social Science Data Archive)</a> </p>
+<br/>
+<b>Related publications:</b>
+<p>Rudkowsky, Elena, Martin Haselmayer, Matthias Wastian, Marcelo Jenny, Stefan Emrich, and Michael Sedlmair (2018). More than bags of words: Sentiment Analysis with word embeddings.  <i>Communication Methods and Measures</i> 12(2-3): 140-157.<a href="https://www.tandfonline.com/doi/full/10.1080/19312458.2018.1455817
+" target="_blank"> DOI: 10.1080/19312458.2018.1455817 </a></p>
+<p>Haselmayer, Martin and Marcelo Jenny (2017). Sentiment Analysis Of Political Communication: Combining a dictionary approach with crowdcoding. <i>Quality &amp; Quantity</i> 51(6): 2623-2646. <a href="http://link.springer.com/article/10.1007%2Fs11135-016-0412-4" target="_blank">doi:10.1007/s11135-016-0412-4</a> </p>
+<br/>
+<p>All data were collected within the Austrian National Election Study (<a href="http://www.autnes.at/" target="_blank">AUTNES</a>). </p>
+<br/>
+<h6>Equality Concepts Dataset</h6>
+
+<p>
+The dataset contains comparative information on party conceptions of economic equality, equal chances and social mobility, equal rights and anti-discrimination, general equality mentions, and other aspects of equality across 12 OECD countries from 1970 to 2025. The data are based on the crowdcoding of party manifestos and provide measures of the relative emphasis parties place on five different concepts of equality.
+</p>
+
+<p>
+Data and documentation are available via
+<a href="https://doi.org/10.7910/DVN/DPNEKE" target="_blank">Harvard Dataverse</a>.
+</p>
+
+<br/>
+
+<b>Related publications:</b>
+
+<p>
+Horn, Alexander, <b>Martin Haselmayer</b>, and K. Jonathan Klüser (2026).
+Why inequalities persist. Parties' (non-)responses to economic inequality, 1970–2020.
+<i>American Political Science Review</i> 120(1): 346–364.
+<a href="https://doi.org/10.1017/S0003055425100907" target="_blank">DOI</a>
+</p>
+
+<p>
+Horn, Alexander, K. Jonathan Klüser, and <b>Martin Haselmayer</b> (2025).
+Social Progress at the Expense of Economic Equality? New Data on Left Parties' Equality Preferences.
+<i>European Journal of Political Research</i> 64(4): 2051–2062.
+<a href="https://ejpr.onlinelibrary.wiley.com/doi/full/10.1111/1475-6765.70008" target="_blank">Article</a>
+</p>
+
+<p>
+Horn, Alexander, <b>Martin Haselmayer</b>, and K. Jonathan Klüser (2026).
+Blurring lines. Economic equality and equal rights concepts of center- and far-right parties, 1970–2020.
+<i>Party Politics</i> 32(2): 219–230.
+<a href="https://doi.org/10.1177/13540688251339625" target="_blank">DOI</a>
+</p>
+
+    </div>
+  </details>
+
+</section>
+
+<section id="teaching">
+
+  <h2>Teaching</h2>
+
+<p>
+At Hochschule Campus Wien, I currently teach research methods and supervise Bachelor’s theses. Previously, I taught undergraduate and graduate courses on quantitative methods, empirical data collection, comparative politics, political communication, and party competition at the University of Vienna, the University of Innsbruck, and the University of Konstanz.
+</p>
+
+  <details>
+    <summary>Further teaching information</summary>
+    <div class="details-content">
+      <h5>Teaching</h5>
+<p>	
+Since 2014, I have been teaching undergraduate courses at the University of Vienna on topics such as Empirical Data Collection, Quantitative Methods, Comparative Politics, Party Competition, the Austrian Political System, and the European Union. 
+ Together with Wolfgang C. Müller, I have also co-taught a course on Constitutional Politics for Master's students. </p>	
+ 
+<p>In addition, I have delivered a seminar on Party Competition and Political Communication at the University of Innsbruck and taught Crowdsourced Text Analysis for PhD students at the Konstanz Methods Excellence Workshops/University of Konstanz.</p>
+
+<p>At Hochschule Campus Wien, I currently teach <a href="https://www.hcw.ac.at/ueber-uns/personen/detail/martin-haselmayer
+" target="_blank">research methods courses</a> at the Bachelor’s and Master’s levels.</p>
+
+
+ 
+ <p>Further information on my classes is available below. </p>
+ 
+<br>
+ 
+<!--<p><h6>Current classes</h6><p></p>-->
+<h6>Past classes</h6><p>
+<a href="https://zeus.uni-konstanz.de:443/hioserver/pages/startFlow.xhtml?_flowId=detailView-flow&amp;unitId=97019&amp;periodId=556&amp;navigationPosition=studiesOffered,searchCourses" target="_blank">University of Konstanz</a>
+<p>
+<a href="https://ufind.univie.ac.at/en/person.html?id=41076&teaching=true" target="_blank">University of Vienna</a>
+<p>
+<a href="https://lfuonline.uibk.ac.at/public/lfuonline_lv.details?sem_id_in=19W&amp;lvnr_id_in=402113" target="_blank">University of Innsbruck</a> <p>
+<br/>
+    </div>
+  </details>
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+  <p>
+    Martin Haselmayer<br>
+    Hochschule Campus Wien<br>
+    Research Center for Administrative Sciences<br>
+    Postdoctoral Researcher<br>
+    <a href="mailto:martin.haselmayer@hcw.ac.at">
+      martin.haselmayer@hcw.ac.at
+    </a>
+  </p>
+
+  <p>
+    <a href="https://orcid.org/0000-0002-7765-5158" target="_blank">ORCID</a> ·
+    <a href="https://scholar.google.at/citations?user=sSgEuNAAAAAJ&amp;hl=de&amp;oi=ao" target="_blank">Google Scholar</a> ·
+    <a href="https://www.researchgate.net/profile/Martin_Haselmayer//" target="_blank">ResearchGate</a>
+  </p>
+
+</section>
+
+<footer>
+  Photo credit: Studio Matphoto ·
+  <a href="legal.html">Legal Notice &amp; Privacy</a>
+</footer>
+
+</main>
+</body>
+</html>
